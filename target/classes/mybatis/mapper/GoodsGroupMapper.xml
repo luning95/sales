@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ldn.sales.dao.GoodsGroupDao">
+    <resultMap id="BaseResultMap" type="com.ldn.sales.entity.GoodsGroup">
+        <result column="gg_id" property="ggId" jdbcType="BIGINT"/>
+        <result column="gg_code" property="ggCode" jdbcType="VARCHAR"/>
+        <result column="gg_name" property="ggName" jdbcType="VARCHAR"/>
+        <result column="gg_node" property="ggNode" jdbcType="VARCHAR"/>
+        <result column="gg_parent_node" property="ggParentNode" jdbcType="VARCHAR"/>
+        <result column="gg_img" property="ggImg" jdbcType="VARCHAR"/>
+    </resultMap>
+    <resultMap id="BaseResultMap2" type="com.ldn.sales.entity.GoodsGroup" extends="BaseResultMap">
+        <collection property="goodsList"  column="gg_id" javaType="ArrayList" ofType="com.ldn.sales.entity.Goods">
+            <result column="goods_id" property="goodsId" jdbcType="BIGINT"/>
+            <result column="goods_code" property="goodsCode" jdbcType="VARCHAR"/>
+            <result column="goods_name" property="goodsName" jdbcType="VARCHAR"/>
+            <result column="goods_privce" property="goodsPrice" jdbcType="VARCHAR"/>
+            <result column="goods_unit" property="goodsUnit" jdbcType="VARCHAR"/>
+            <result column="goods_num" property="goodsNum" jdbcType="VARCHAR"/>
+            <result column="goods_state" property="goodsState" jdbcType="TINYINT"/>
+            <result column="goods_state_starttime" property="goodsStateStartTime" jdbcType="TIMESTAMP"/>
+            <result column="goods_privce_state" property="goodsPriceState" jdbcType="TINYINT"/>
+            <result column="goods_privce_state_starttime" property="goodsPriceStateStartTime" jdbcType="TIMESTAMP"/>
+            <result column="goods_dist" property="goodsDist" jdbcType="VARCHAR"/>
+            <result column="goods_classify_state" property="goodsClassifyState" jdbcType="TINYINT"/>
+            <result column="goods_img" property="goodsImg" jdbcType="VARCHAR"/>
+            <!---不可带有gg_id外键，否则出现goods其他属性为空只有gg_id有值-->
+        </collection>
+    </resultMap>
+
+    <select id="getList" resultMap="BaseResultMap">
+            select gg.* from goods_group gg
+    </select>
+    <select id="getListOfCascade" resultMap="BaseResultMap2">
+            select gg.* ,g.* from goods_group gg left join  goods g on gg.gg_id = g.gg_id
+    </select>
+    <insert id="insert" parameterType="com.ldn.sales.entity.GoodsGroup">
+    insert into goods_group (gg_id, gg_code, gg_name, 
+      gg_node, gg_parent_node, gg_img
+      )
+    values (#{ggId,jdbcType=BIGINT}, #{ggCode,jdbcType=VARCHAR}, #{ggName,jdbcType=VARCHAR}, 
+      #{ggNode,jdbcType=VARCHAR}, #{ggParentNode,jdbcType=VARCHAR}, #{ggImg,jdbcType=VARCHAR}
+      )
+  </insert>
+    <insert id="insertSelective" parameterType="com.ldn.sales.entity.GoodsGroup">
+        insert into goods_group
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="ggId != null">
+                gg_id,
+            </if>
+            <if test="ggCode != null">
+                gg_code,
+            </if>
+            <if test="ggName != null">
+                gg_name,
+            </if>
+            <if test="ggNode != null">
+                gg_node,
+            </if>
+            <if test="ggParentNode != null">
+                gg_parent_node,
+            </if>
+            <if test="ggImg != null">
+                gg_img,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="ggId != null">
+                #{ggId,jdbcType=BIGINT},
+            </if>
+            <if test="ggCode != null">
+                #{ggCode,jdbcType=VARCHAR},
+            </if>
+            <if test="ggName != null">
+                #{ggName,jdbcType=VARCHAR},
+            </if>
+            <if test="ggNode != null">
+                #{ggNode,jdbcType=VARCHAR},
+            </if>
+            <if test="ggParentNode != null">
+                #{ggParentNode,jdbcType=VARCHAR},
+            </if>
+            <if test="ggImg != null">
+                #{ggImg,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+</mapper>
