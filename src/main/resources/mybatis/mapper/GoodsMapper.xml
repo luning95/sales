@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ldn.sales.dao.GoodsDao">
+    <resultMap id="BaseResultMap" type="com.ldn.sales.entity.Goods">
+        <result column="goods_id" property="goodsId" jdbcType="BIGINT"/>
+        <result column="goods_code" property="goodsCode" jdbcType="VARCHAR"/>
+        <result column="goods_name" property="goodsName" jdbcType="VARCHAR"/>
+        <result column="goods_privce" property="goodsPrice" jdbcType="VARCHAR"/>
+        <result column="goods_unit" property="goodsUnit" jdbcType="VARCHAR"/>
+        <result column="goods_num" property="goodsNum" jdbcType="VARCHAR"/>
+        <result column="goods_state" property="goodsState" jdbcType="TINYINT"/>
+        <result column="goods_state_starttime" property="goodsStateStartTime" jdbcType="TIMESTAMP"/>
+        <result column="goods_privce_state" property="goodsPriceState" jdbcType="TINYINT"/>
+        <result column="goods_privce_state_starttime" property="goodsPriceStateStartTime" jdbcType="TIMESTAMP"/>
+        <result column="goods_dist" property="goodsDist" jdbcType="VARCHAR"/>
+        <result column="goods_classify_state" property="goodsClassifyState" jdbcType="TINYINT"/>
+        <result column="goods_img" property="goodsImg" jdbcType="VARCHAR"/>
+        <result column="gg_id" property="ggId" jdbcType="BIGINT"/>
+
+    </resultMap>
+
+    <resultMap id="BaseResultMap2" type="com.ldn.sales.entity.Goods" extends="BaseResultMap">
+        <association property="goodsGroup" column="gg_id" javaType="com.ldn.sales.entity.GoodsGroup">
+            <result column="gg_id" property="ggId" jdbcType="BIGINT"/>
+            <result column="gg_code" property="ggCode" jdbcType="VARCHAR"/>
+            <result column="gg_name" property="ggName" jdbcType="VARCHAR"/>
+            <result column="gg_node" property="ggNode" jdbcType="VARCHAR"/>
+            <result column="gg_parent_node" property="ggParentNode" jdbcType="VARCHAR"/>
+            <result column="gg_img" property="ggImg" jdbcType="VARCHAR"/>
+        </association>
+    </resultMap>
+
+    <select id="getListOfCascade" resultMap="BaseResultMap2">
+            select g.*,gg.* from goods g left join goods_group gg on g.gg_id=gg.gg_id
+    </select>
+    <select id="getList" resultMap="BaseResultMap">
+            select g.* from goods g
+    </select>
+    <select id="getListByGGID" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+       select g.* from goods g
+        WHERE g.gg_id=#{ggId}
+    </select>
+
+    <insert id="insert" parameterType="com.ldn.sales.entity.Goods">
+    insert into goods (goods_id, goods_code, goods_name, 
+      goods_privce, goods_unit, goods_num, 
+      goods_state, goods_state_starttime, goods_privce_state, 
+      goods_privce_state_starttime, goods_dist, 
+      goods_classify_state, goods_img, gg_id
+      )
+    values (#{goodsId,jdbcType=BIGINT}, #{goodsCode,jdbcType=VARCHAR}, #{goodsName,jdbcType=VARCHAR}, 
+      #{goodsPrice,jdbcType=VARCHAR}, #{goodsUnit,jdbcType=VARCHAR}, #{goodsNum,jdbcType=VARCHAR},
+      #{goodsState,jdbcType=TINYINT}, #{goodsStateStartTime,jdbcType=TIMESTAMP}, #{goodsPriceState,jdbcType=TINYINT},
+      #{goodsPriceStateStartTime,jdbcType=TIMESTAMP}, #{goodsDist,jdbcType=VARCHAR},
+      #{goodsClassifyState,jdbcType=TINYINT}, #{goodsImg,jdbcType=VARCHAR}, #{ggId,jdbcType=BIGINT}
+      )
+  </insert>
+    <insert id="insertSelective" parameterType="com.ldn.sales.entity.Goods">
+        insert into goods
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="goodsId != null">
+                goods_id,
+            </if>
+            <if test="goodsCode != null">
+                goods_code,
+            </if>
+            <if test="goodsName != null">
+                goods_name,
+            </if>
+            <if test="goodsPrice != null">
+                goods_privce,
+            </if>
+            <if test="goodsUnit != null">
+                goods_unit,
+            </if>
+            <if test="goodsNum != null">
+                goods_num,
+            </if>
+            <if test="goodsState != null">
+                goods_state,
+            </if>
+            <if test="goodsStateStartTime != null">
+                goods_state_starttime,
+            </if>
+            <if test="goodsPriceState != null">
+                goods_privce_state,
+            </if>
+            <if test="goodsPriceStateStartTime != null">
+                goods_privce_state_starttime,
+            </if>
+            <if test="goodsDist != null">
+                goods_dist,
+            </if>
+            <if test="goodsClassifyState != null">
+                goods_classify_state,
+            </if>
+            <if test="goodsImg != null">
+                goods_img,
+            </if>
+            <if test="ggId != null">
+                gg_id,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="goodsId != null">
+                #{goodsId,jdbcType=BIGINT},
+            </if>
+            <if test="goodsCode != null">
+                #{goodsCode,jdbcType=VARCHAR},
+            </if>
+            <if test="goodsName != null">
+                #{goodsName,jdbcType=VARCHAR},
+            </if>
+            <if test="goodsPrice != null">
+                #{goodsPrice,jdbcType=VARCHAR},
+            </if>
+            <if test="goodsUnit != null">
+                #{goodsUnit,jdbcType=VARCHAR},
+            </if>
+            <if test="goodsNum != null">
+                #{goodsNum,jdbcType=VARCHAR},
+            </if>
+            <if test="goodsState != null">
+                #{goodsState,jdbcType=TINYINT},
+            </if>
+            <if test="goodsStateStartTime != null">
+                #{goodsStateStartTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="goodsPriceState != null">
+                #{goodsPriceState,jdbcType=TINYINT},
+            </if>
+            <if test="goodsPriceStateStartTime != null">
+                #{goodsPriceStateStartTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="goodsDist != null">
+                #{goodsDist,jdbcType=VARCHAR},
+            </if>
+            <if test="goodsClassifyState != null">
+                #{goodsClassifyState,jdbcType=TINYINT},
+            </if>
+            <if test="goodsImg != null">
+                #{goodsImg,jdbcType=VARCHAR},
+            </if>
+            <if test="ggId != null">
+                #{ggId,jdbcType=BIGINT},
+            </if>
+        </trim>
+    </insert>
+</mapper>
