@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd186631-44d6-4477-9a34-3841a5958872" name="Default" comment="First project of Git" />
+    <list default="true" id="fd186631-44d6-4477-9a34-3841a5958872" name="Default" comment="First project of Git">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ldn/sales/SMApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ldn/sales/SMApplication.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,7 +44,21 @@
     <favorites_list name="demo1" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="SMApplication.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ldn/sales/SMApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+              <folding>
+                <element signature="e#327#328#0" expanded="true" />
+                <element signature="e#391#392#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -100,7 +117,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ldn/sales/common/redis/util/JedisPool.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/ldn/sales/common/redis/util/RedisConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ldn/sales/SMApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ldn/sales/entity/GoodsGroup.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ldn/sales/common/redis/RedisConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis/mybatis-config.xml" />
@@ -108,6 +124,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ldn/sales/service/GoodsGroupService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ldn/sales/service/GoodsService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ldn/sales/common/shirojwt/controller/WebController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ldn/sales/SMApplication.java" />
       </list>
     </option>
   </component>
@@ -166,11 +183,6 @@
             <path>
               <item name="sales" type="b2602c69:ProjectViewProjectNode" />
               <item name="sales" type="462c0819:PsiDirectoryNode" />
-              <item name=".mvn" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sales" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sales" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -193,13 +205,20 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="sales" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sales" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sales" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -378,7 +397,8 @@
       <workItem from="1543221562759" duration="1046000" />
       <workItem from="1543222714459" duration="2164000" />
       <workItem from="1543225703227" duration="14000" />
-      <workItem from="1543225842859" duration="301000" />
+      <workItem from="1543225842859" duration="843000" />
+      <workItem from="1543289871492" duration="651000" />
     </task>
     <task id="LOCAL-00001" summary="First project of Git">
       <created>1543213627196</created>
@@ -409,13 +429,14 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108473000" />
+    <option name="totallyTimeSpent" value="109666000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="704" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="15" sideWeight="0.19401778" side_tool="true" visible="true" weight="0.36474696" />
+      <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.19401778" side_tool="true" visible="true" weight="0.36474696" />
       <window_info anchor="right" id="Maven Projects" order="9" visible="true" weight="0.021018593" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info id="Capture Tool" order="7" />
@@ -435,7 +456,7 @@
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="CheckStyle" order="10" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.8827809" weight="0.3292683" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8728223" visible="true" weight="0.23686337" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8728223" visible="true" weight="0.24090542" />
       <window_info anchor="right" id="Bean Validation" order="8" />
       <window_info id="Web" order="6" sideWeight="0.50352114" side_tool="true" weight="0.2724333" />
       <window_info anchor="right" id="Theme Preview" order="7" />
@@ -711,11 +732,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
           <caret line="34" column="57" lean-forward="true" selection-start-line="34" selection-start-column="57" selection-end-line="34" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4796#4797#0" expanded="true" />
-            <element signature="e#4842#4843#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -732,9 +748,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="880">
           <caret line="54" column="27" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -756,13 +769,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="246" column="22" selection-start-line="246" selection-start-column="16" selection-end-line="246" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ldn/sales/SMApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -919,6 +925,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ldn/sales/SMApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+          <folding>
+            <element signature="e#327#328#0" expanded="true" />
+            <element signature="e#391#392#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
