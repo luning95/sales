@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd186631-44d6-4477-9a34-3841a5958872" name="Default" comment="First project of Git">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ldn/sales/SMApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ldn/sales/SMApplication.java" afterDir="false" />
-    </list>
+    <list default="true" id="fd186631-44d6-4477-9a34-3841a5958872" name="Default" comment="First project of Git" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -398,7 +395,7 @@
       <workItem from="1543222714459" duration="2164000" />
       <workItem from="1543225703227" duration="14000" />
       <workItem from="1543225842859" duration="843000" />
-      <workItem from="1543289871492" duration="651000" />
+      <workItem from="1543289871492" duration="925000" />
     </task>
     <task id="LOCAL-00001" summary="First project of Git">
       <created>1543213627196</created>
@@ -414,7 +411,14 @@
       <option name="project" value="LOCAL" />
       <updated>1543224182077</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="First project of Git">
+      <created>1543292359344</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1543292359344</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -429,14 +433,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109666000" />
+    <option name="totallyTimeSpent" value="109940000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="704" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.19401778" side_tool="true" visible="true" weight="0.36474696" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="15" sideWeight="0.19401778" side_tool="true" visible="true" weight="0.36474696" />
       <window_info anchor="right" id="Maven Projects" order="9" visible="true" weight="0.021018593" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info id="Capture Tool" order="7" />
@@ -456,7 +459,7 @@
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="CheckStyle" order="10" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.8827809" weight="0.3292683" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8728223" visible="true" weight="0.24090542" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8728223" visible="true" weight="0.24090542" />
       <window_info anchor="right" id="Bean Validation" order="8" />
       <window_info id="Web" order="6" sideWeight="0.50352114" side_tool="true" weight="0.2724333" />
       <window_info anchor="right" id="Theme Preview" order="7" />
